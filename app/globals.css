@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0A0E1A;
+  color: #E8E8F0;
+  font-family: var(--font-inter), var(--font-noto), sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+::selection {
+  background: #E03E3E;
+  color: #0A0E1A;
+}
+
+a {
+  color: inherit;
+}
+
+/* Custom utility for kbd */
+kbd {
+  background: #1a2238;
+  color: #E8E8F0;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-family: var(--font-inter), monospace;
+  font-size: 0.7rem;
+  margin: 0 1px;
+}

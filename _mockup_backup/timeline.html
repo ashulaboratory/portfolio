@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Timeline | Ashisa Murakami</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="index.html" class="logo">ASHISA</a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="timeline.html" class="active">Timeline</a></li>
+      <li><a href="works.html">Works</a></li>
+      <li><a href="https://github.com/ashulaboratory" target="_blank" rel="noopener">GitHub ↗</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="page-header">
+  <h1>Timeline</h1>
+  <div class="page-sub">学校・インターン・作品の時系列。</div>
+</div>
+
+<section class="page-tight">
+  <div class="timeline" id="timeline"></div>
+</section>
+
+<footer>
+  <div class="footer-links">
+    <a href="https://github.com/ashulaboratory" target="_blank" rel="noopener">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.58v-2c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.21.08 1.84 1.24 1.84 1.24 1.07 1.84 2.81 1.31 3.5 1 .11-.78.42-1.31.76-1.61-2.66-.3-5.46-1.33-5.46-5.93 0-1.31.47-2.38 1.24-3.22-.12-.31-.54-1.53.12-3.18 0 0 1.01-.32 3.3 1.23a11.51 11.51 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.65.24 2.87.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.62-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58A12 12 0 0 0 12 .5z"/></svg>
+      GitHub
+    </a>
+  </div>
+  <div>© 2026 Ashisa Murakami</div>
+</footer>
+
+<!-- Ash -->
+<div id="ash-wrapper">
+  <svg id="ash" viewBox="0 0 24 28" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+    <rect x="5" y="0" width="2" height="2" fill="#C8252A"/>
+    <rect x="5" y="2" width="2" height="2" fill="#1a1a1a"/>
+    <rect x="17" y="0" width="2" height="2" fill="#C8252A"/>
+    <rect x="17" y="2" width="2" height="2" fill="#1a1a1a"/>
+    <rect x="5" y="4" width="14" height="2" fill="#1a1a1a"/>
+    <rect x="3" y="6" width="18" height="2" fill="#1a1a1a"/>
+    <rect x="2" y="8" width="4" height="4" fill="#1a1a1a"/>
+    <rect x="6" y="8" width="2" height="4" fill="#E03E3E"/>
+    <rect x="8" y="8" width="8" height="4" fill="#1a1a1a"/>
+    <rect x="16" y="8" width="2" height="4" fill="#E03E3E"/>
+    <rect x="18" y="8" width="4" height="4" fill="#1a1a1a"/>
+    <rect x="2" y="12" width="20" height="2" fill="#1a1a1a"/>
+    <rect x="2" y="14" width="6" height="2" fill="#1a1a1a"/>
+    <rect x="8" y="14" width="8" height="2" fill="#000000"/>
+    <rect x="16" y="14" width="6" height="2" fill="#1a1a1a"/>
+    <rect x="2" y="16" width="20" height="2" fill="#1a1a1a"/>
+    <rect x="3" y="18" width="18" height="2" fill="#1a1a1a"/>
+    <rect x="4" y="20" width="16" height="2" fill="#1a1a1a"/>
+    <rect x="5" y="22" width="14" height="2" fill="#1a1a1a"/>
+    <rect x="7" y="24" width="10" height="2" fill="#1a1a1a"/>
+    <rect x="10" y="26" width="6" height="2" fill="#1a1a1a"/>
+  </svg>
+</div>
+
+<div class="ash-hint">Ash で遊ぶ → <kbd>↑</kbd><kbd>↓</kbd><kbd>←</kbd><kbd>→</kbd> ／ <kbd>Esc</kbd></div>
+
+<script src="data.js"></script>
+<script src="common.js"></script>
+<script>
+const timelineEl = document.getElementById('timeline');
+TIMELINE.forEach(item => {
+  const div = document.createElement('div');
+  div.className = 'timeline-item';
+  div.innerHTML = `
+    <div class="timeline-header">
+      <div class="timeline-date">${item.date}</div>
+    </div>
+    <div class="timeline-title">${item.title}</div>
+    <div class="timeline-desc">${item.short}</div>
+  `;
+  timelineEl.appendChild(div);
+});
+</script>
+
+</body>
+</html>
