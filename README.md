@@ -91,15 +91,10 @@ npm run start
 - `Esc` で元のフォローモードに戻る
 - モバイルでは非表示
 
-`components/Ash.tsx` と `components/AshSvg.tsx` を編集すれば、見た目や動きを変えられます。
-本物のドット絵画像（PNG）に差し替える場合は、`AshSvg.tsx` を `<Image src="/ash.png" ... />` に置き換え、画像を `public/ash.png` に置いてください。
+
+
 
 ---
 
-## デプロイ（Vercel）
-
-1. GitHubにこのリポジトリをpush
-2. [vercel.com](https://vercel.com) で「Import Git Repository」
-3. Next.jsとして自動認識されるので、そのままDeploy
 
 カスタムドメイン設定もVercelダッシュボードから可能です。
