@@ -61,54 +61,7 @@ npm run start
 
 ---
 
-## コンテンツを更新するには
 
-`data/` 配下のファイルを編集するだけで、対応するページが自動で更新されます。
-
-### 例：新しい作品を追加する
-
-`data/projects.ts` の配列に1要素追加：
-
-```ts
-{
-  id: "new-project",
-  tag: "Web",
-  title: "新しい作品",
-  subtitle: "サブタイトル",
-  desc: "短い説明（カードに表示）",
-  detail: {
-    background: "詳細な背景",
-    design: ["工夫1", "工夫2"],
-    result: "成果",
-  },
-  tech: ["Next.js", "TypeScript"],
-}
-```
-
-### 例：自己紹介文を変える
-
-`data/profile.ts` の `bio` 配列を編集。
-
-### 例：受賞・採択を追加する
-
-`data/awards.ts` の配列に追加。`type` は `"award"`（🏆）か `"selection"`（✦）。
-
-### 例：生い立ちタイムラインに項目を追加する
-
-`data/timeline.ts` の配列に追加。
-
-```ts
-{
-  year: "2024",
-  title: "プロコン全国大会 特別賞",
-  description: "そのときの気持ちや背景を自由に。",
-  image: "/timeline/procon.jpg", // public/timeline/procon.jpg に画像を置く
-}
-```
-
-画像は `public/timeline/` 配下に置けば自動で使えます。`image` を省略すると年号入りのプレースホルダーが表示されます。
-
----
 
 ## デザインシステム
 
